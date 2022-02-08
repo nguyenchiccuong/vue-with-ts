@@ -4,15 +4,24 @@
     <a href="#" @click="this.$router.push({ name: 'Add' })">Add Restaurant</a>
     <a href="#" @click="logout">Logout</a>
 
-    <a href="#" :style="{ float: 'right' }" @click="logout">Name</a>
+    <a href="#" :style="{ float: 'right' }" @click="logout">{{username}}</a>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { Options, Vue, prop } from "vue-class-component";
+
+// Define props in a class
+class Props {
+  username = prop({
+    // Same as Vue core's prop option
+    type: Number,
+    required: true,
+  })
+}
 
 @Options({})
-export default class Header extends Vue {
+export default class Header extends Vue.with(Props) {
   logout(): void {
     localStorage.clear();
     this.$router.push({ name: "Login" });

@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :username="name" />
   <h1>Hello {{ name }}, Welcome to Add Restaurant Page</h1>
   <form class="add" @submit.prevent="addRestaurant">
     <input
