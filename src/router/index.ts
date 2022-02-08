@@ -31,10 +31,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Update,
     path: "/update/:id",
   },
-  {
-    path: "/:catchAll(.*)",
-    component: Login,
-  },
+  { name: "CatchAll", path: "/:catchAll(.*)", component: Login },
   // {
   //   path: '/about',
   //   name: 'About',
@@ -48,6 +45,15 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+// GOOD
+router.beforeEach((to, from, next) => {
+  const user = localStorage.getItem("user-info");
+  console.log(to.name);
+  if (user !== null && (to.name === "Login" || to.name === "SignUp" || to.name === "CatchAll")) next({ name: "Home" });
+  else if (user === null && to.name !== "Login" && to.name !== "SignUp") next({ name: "Login" });
+  else next();
 });
 
 export default router;
