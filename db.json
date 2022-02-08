@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "bbdn@test.com",
+      "name": "anil",
+      "password": "abc@123"
+    },
+    {
+      "email": "dfgdfg",
+      "name": "twertrsg",
+      "password": "dfgdfg",
+      "id": 2
+    },
+    {
+      "email": "sdfsdf",
+      "name": "sdfsd",
+      "password": "sdfdsf",
+      "id": 3
+    },
+    {
+      "email": "sdf",
+      "name": "fdsf",
+      "password": "sdfsd",
+      "id": 4
+    },
+    {
+      "email": "test",
+      "name": "test",
+      "password": "1234356",
+      "id": 5
+    },
+    {
+      "email": "test",
+      "name": "test",
+      "password": "tet",
+      "id": 6
+    },
+    {
+      "email": "bum",
+      "name": "bum",
+      "password": "bym",
+      "id": 7
+    }
+  ],
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Pizza Hut",
+      "address": "Noida",
+      "contact": "pizzahut@test.com"
+    },
+    {
+      "id": 2,
+      "name": "McDonald",
+      "address": "Delhi",
+      "contact": "mcdonald@test.com"
+    },
+    {
+      "name": "W B Restaurant",
+      "contact": "wbr@test.com",
+      "address": "Noida , Delhi",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "BBQ nation",
+      "address": "Gurgaon",
+      "contact": "bbdn@test.com"
+    },
+    {
+      "id": 5,
+      "name": "Haldiram nation",
+      "address": "Gurgaon",
+      "contact": "haldiram@test.com"
+    },
+    {
+      "name": "KFC",
+      "contact": "kfc@test.com",
+      "address": "noida",
+      "id": 6
+    },
+    {
+      "name": "KFC",
+      "contact": "kfc@test.com",
+      "address": "South Delhi",
+      "id": 7
+    },
+    {
+      "name": "sid food",
+      "contact": "kfc@test.com",
+      "address": "Delhi",
+      "id": 8
+    },
+    {
+      "name": "test",
+      "address": "etete",
+      "contact": "etet",
+      "id": 9
+    },
+    {
+      "name": "bfgbfg",
+      "address": "gbfgb",
+      "contact": "fgbfgb",
+      "id": 10
+    }
+  ]
+}

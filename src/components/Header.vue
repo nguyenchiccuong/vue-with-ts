@@ -1,0 +1,42 @@
+<template>
+  <div class="nav">
+    <router-link to="/">Home</router-link>
+    <a href="#" @click="this.$router.push({ name: 'Add' })">Add Restaurant</a>
+    <a href="#" @click="logout">Logout</a>
+
+    <a href="#" :style="{ float: 'right' }" @click="logout">Name</a>
+  </div>
+</template>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+
+@Options({})
+export default class Header extends Vue {
+  logout(): void {
+    localStorage.clear();
+    this.$router.push({ name: "Login" });
+  }
+}
+</script>
+
+<style scoped>
+.nav {
+  background-color: #333;
+  overflow: hidden;
+}
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 17px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.nav a:hover {
+  background: #ddd;
+  color: #333;
+}
+</style>
