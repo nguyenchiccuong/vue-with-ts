@@ -14,13 +14,17 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import axios from "axios";
+import { mapActions } from "vuex";
 
 @Options({
   components: {},
+  methods: mapActions(["updateUsername"]),
 })
 export default class Login extends Vue {
+  isMale!: string; //use in vue always need ?: or !:
   email = "" as string;
   password = "" as string;
+  updateUsername!: (username: string) => void;
 
   async login(): Promise<void> {
     let result = await axios.get(
@@ -28,6 +32,7 @@ export default class Login extends Vue {
     );
     if (result.status === 200 && result.data.length > 0) {
       localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+      this.updateUsername(this.email);
       this.$router.push({ name: "Home" });
     } else {
       alert("Email or password invalid");
@@ -36,5 +41,4 @@ export default class Login extends Vue {
 }
 </script>
 
-<style>
-</style>
+<style></style>

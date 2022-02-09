@@ -4,7 +4,7 @@
     <a href="#" @click="this.$router.push({ name: 'Add' })">Add Restaurant</a>
     <a href="#" @click="logout">Logout</a>
 
-    <a href="#" :style="{ float: 'right' }" @click="logout">{{username}}</a>
+    <a href="#" :style="{ float: 'right' }">{{ username }}</a>
   </div>
 </template>
 
@@ -15,9 +15,9 @@ import { Options, Vue, prop } from "vue-class-component";
 class Props {
   username = prop({
     // Same as Vue core's prop option
-    type: Number,
+    type: String,
     required: true,
-  })
+  });
 }
 
 @Options({})

@@ -50,7 +50,6 @@ const router = createRouter({
 // GOOD
 router.beforeEach((to, from, next) => {
   const user = localStorage.getItem("user-info");
-  console.log(to.name);
   if (user !== null && (to.name === "Login" || to.name === "SignUp" || to.name === "CatchAll")) next({ name: "Home" });
   else if (user === null && to.name !== "Login" && to.name !== "SignUp") next({ name: "Login" });
   else next();

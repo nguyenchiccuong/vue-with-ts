@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :username="$store.getters.getUsername"/>
   <h1>Helle {{ name }}, Welcome to Home Page</h1>
   <table border="1">
     <tr>
